@@ -1,0 +1,23 @@
+Instructions for configuring the workspace
+
+	General Options
+		Target -> Device: TexasInstruments LM3S1968
+		Output -> Executable
+		Library Configuration -> Normal
+		Libary Options -> Print formatter: Tiny, Scanf formatter: Small
+	C/C++ Compiler
+		Code -> Nothing selected
+		Optimizations -> Level: High (Size)
+		Output -> Generate debug information, Code section name: .text
+		Preprocessor	-> Additional include directories: $PROJ_DIR$\..\..\Libraries
+						-> Defined symbols: ewarm, PART_LM3S1968
+		Diagnostics -> Suppress these diagnostics: Pa050
+	Output Converter
+		Output -> Generate additional output, Output format: binary
+	Linker
+		Library -> Automatic runtime library selection, Override default program entry __iar_program_start
+		Output -> Output filename: name.out, include debug information in output
+		List -> Generate linker map file
+	Debugger
+		Setup -> TI Stellaris
+		Download -> Verify download, Use flash loader
