@@ -29,9 +29,7 @@ main(void)
     GPIO_PORTG_DIR_R = 0x04;
     GPIO_PORTG_DEN_R = 0x04;
 
-    //
     // Loop forever.
-    //
     while(1)
     {
         //

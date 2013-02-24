@@ -2,43 +2,53 @@
 
 <project>
   <fileVersion>2</fileVersion>
-  <fileChecksum>1170397696</fileChecksum>
+  <fileChecksum>2198209799</fileChecksum>
   <configuration>
     <name>Debug</name>
     <outputs>
       <file>$PROJ_DIR$\Debug\Obj\startup.pbi</file>
-      <file>$PROJ_DIR$\main.c</file>
+      <file>$PROJ_DIR$\flashLED.c</file>
       <file>$PROJ_DIR$\startup.c</file>
+      <file>$PROJ_DIR$\main.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
       <file>$PROJ_DIR$\Debug\Obj\flashLED.pbd</file>
       <file>$PROJ_DIR$\Debug\Exe\flashLED.out</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
-      <file>$PROJ_DIR$\Debug\Exe\flashLED.bin</file>
-      <file>$PROJ_DIR$\Debug\Exe\c.out</file>
-      <file>$PROJ_DIR$\flashLED.c</file>
+      <file>$PROJ_DIR$\..\..\Libraries\inc\lm3s1968.h</file>
       <file>$PROJ_DIR$\Debug\Obj\startup.o</file>
       <file>$PROJ_DIR$\Debug\Obj\main.o</file>
-      <file>$TOOLKIT_DIR$\config\linker\TexasInstruments\LM3S1968.icf</file>
-      <file>$PROJ_DIR$\..\..\Libraries\inc\lm3s1968.h</file>
-      <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
       <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+      <file>$TOOLKIT_DIR$\config\linker\TexasInstruments\LM3S1968.icf</file>
+      <file>$PROJ_DIR$\Debug\Exe\flashLED.bin</file>
+      <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
       <file>$TOOLKIT_DIR$\lib\m7M_tl.a</file>
+      <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+      <file>$PROJ_DIR$\..\Part B\toggleLED.c</file>
       <file>$PROJ_DIR$\Debug\List\flashLED.map</file>
       <file>$PROJ_DIR$\Debug\Obj\flashLED.o</file>
       <file>$PROJ_DIR$\Debug\Obj\flashLED.pbi</file>
-      <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
     </outputs>
     <file>
-      <name>$PROJ_DIR$\main.c</name>
+      <name>$PROJ_DIR$\flashLED.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 5</file>
+          <file> 19</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 10</file>
+          <file> 18</file>
         </tool>
       </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 7</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 7</file>
+        </tool>
+      </inputs>
     </file>
     <file>
       <name>$PROJ_DIR$\startup.c</name>
@@ -46,6 +56,19 @@
         <tool>
           <name>BICOMP</name>
           <file> 0</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 8</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\main.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 4</file>
         </tool>
         <tool>
           <name>ICCARM</name>
@@ -58,40 +81,17 @@
       <outputs>
         <tool>
           <name>ILINK</name>
-          <file> 16</file>
+          <file> 17</file>
         </tool>
         <tool>
           <name>OBJCOPY</name>
-          <file> 6</file>
+          <file> 12</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ILINK</name>
-          <file> 11 17 9 14 13 15 19</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\flashLED.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 18</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 17</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 12</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 12</file>
+          <file> 11 18 8 10 15 14 13</file>
         </tool>
       </inputs>
     </file>
@@ -100,7 +100,7 @@
       <outputs>
         <tool>
           <name>ILINK</name>
-          <file> 4 16</file>
+          <file> 17 6</file>
         </tool>
       </outputs>
     </file>
@@ -111,6 +111,9 @@
     <forcedrebuild>
       <name>[MULTI_TOOL]</name>
       <tool>ILINK</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>[REBUILD_ALL]</name>
     </forcedrebuild>
   </configuration>
 </project>

@@ -1,0 +1,294 @@
+###############################################################################
+#                                                                             #
+# IAR ELF Linker V6.50.2.4510/W32 for ARM               18/Feb/2013  14:25:44 #
+# Copyright 2007-2012 IAR Systems AB.                                         #
+#                                                                             #
+#    Output file  =  C:\Program Files\IAR Systems\Embedded Workbench          #
+#                    6.5\arm\examples\TexasInstruments\Stellaris\boards\ek-lm #
+#                    3s1968\audio\ewarm\Exe\audio.out                         #
+#    Map file     =  C:\Program Files\IAR Systems\Embedded Workbench          #
+#                    6.5\arm\examples\TexasInstruments\Stellaris\boards\ek-lm #
+#                    3s1968\audio\ewarm\List\audio.map                        #
+#    Command line =  "C:\Program Files\IAR Systems\Embedded Workbench         #
+#                    6.5\arm\examples\TexasInstruments\Stellaris\boards\ek-lm #
+#                    3s1968\audio\ewarm\Obj\audio.o" "C:\Program Files\IAR    #
+#                    Systems\Embedded Workbench 6.5\arm\examples\TexasInstrum #
+#                    ents\Stellaris\boards\ek-lm3s1968\audio\ewarm\Obj\class- #
+#                    d.o" "C:\Program Files\IAR Systems\Embedded Workbench    #
+#                    6.5\arm\examples\TexasInstruments\Stellaris\boards\ek-lm #
+#                    3s1968\audio\ewarm\Obj\rit128x96x4.o" "C:\Program        #
+#                    Files\IAR Systems\Embedded Workbench                     #
+#                    6.5\arm\examples\TexasInstruments\Stellaris\boards\ek-lm #
+#                    3s1968\audio\ewarm\Obj\startup.o" "C:\Program Files\IAR  #
+#                    Systems\Embedded Workbench 6.5\arm\examples\TexasInstrum #
+#                    ents\Stellaris\driverlib\ewarm-cm3\Exe\driverlib-cm3.a"  #
+#                    --redirect _Printf=_PrintfTiny --redirect                #
+#                    _Scanf=_ScanfSmall -o "C:\Program Files\IAR              #
+#                    Systems\Embedded Workbench 6.5\arm\examples\TexasInstrum #
+#                    ents\Stellaris\boards\ek-lm3s1968\audio\ewarm\Exe\audio. #
+#                    out" --map "C:\Program Files\IAR Systems\Embedded        #
+#                    Workbench 6.5\arm\examples\TexasInstruments\Stellaris\bo #
+#                    ards\ek-lm3s1968\audio\ewarm\List\audio.map" --config    #
+#                    "C:\Program Files\IAR Systems\Embedded Workbench         #
+#                    6.5\arm\examples\TexasInstruments\Stellaris\boards\ek-lm #
+#                    3s1968\audio\audio.icf" --semihosting --entry            #
+#                    __iar_program_start --vfe                                #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A1":  place at start of [0x00000000-0x0003ffff] { ro section .intvec };
+"P1":  place in [from 0x00000000 to 0x0003ffff] { ro };
+"P2":  place in [from 0x20000000 to 0x2000ffff] { rw, block HEAP };
+
+  Section            Kind        Address     Size  Object
+  -------            ----        -------     ----  ------
+"A1":                                        0xf0
+  .intvec            const    0x00000000     0xf0  startup.o [1]
+                            - 0x000000f0     0xf0
+
+"P1":                                     0x12c90
+  .rodata            const    0x000000f0   0xbb88  audio.o [1]
+  .text              ro code  0x0000bc78   0x6004  audio.o [1]
+  .text              ro code  0x00011c7c    0x136  gpio.o [4]
+  .text              ro code  0x00011db2     0x2e  copy_init3.o [5]
+  .text              ro code  0x00011de0    0x3d0  class-d.o [1]
+  .text              ro code  0x000121b0    0x3e0  sysctl.o [4]
+  .text              ro code  0x00012590    0x4f0  rit128x96x4.o [1]
+  .text              ro code  0x00012a80     0x28  systick.o [4]
+  .text              ro code  0x00012aa8     0x9a  pwm.o [4]
+  .text              ro code  0x00012b42     0x22  zero_init3.o [5]
+  .text              ro code  0x00012b64     0xe0  interrupt.o [4]
+  .text              ro code  0x00012c44     0x72  ssi.o [4]
+  .text              ro code  0x00012cb8     0x28  data_init.o [5]
+  .iar.init_table    const    0x00012ce0     0x24  - Linker created -
+  .text              ro code  0x00012d04     0x16  cmain.o [5]
+  .text              ro code  0x00012d1a      0x4  low_level_init.o [3]
+  .text              ro code  0x00012d1e      0x4  exit.o [3]
+  .text              ro code  0x00012d24      0xa  cexit.o [5]
+  .text              ro code  0x00012d30     0x14  exit.o [6]
+  .text              ro code  0x00012d44      0xc  cstartup_M.o [5]
+  .text              ro code  0x00012d50      0xa  startup.o [1]
+  .rodata            const    0x00012d5a      0x0  zero_init3.o [5]
+  .rodata            const    0x00012d5a      0x0  copy_init3.o [5]
+  Initializer bytes  ro data  0x00012d5c     0x24  <for P2 s0>
+                            - 0x00012d80  0x12c90
+
+"P2", part 1 of 3:                           0x24
+  P2 s0                       0x20000000     0x24  <Init block>
+    .data            inited   0x20000000     0x20  class-d.o [1]
+    .data            inited   0x20000020      0x3  audio.o [1]
+                            - 0x20000024     0x24
+
+"P2", part 2 of 3:                            0xc
+  .bss               zero     0x20000024      0x8  rit128x96x4.o [1]
+  .bss               zero     0x2000002c      0x4  rit128x96x4.o [1]
+                            - 0x20000030      0xc
+
+"P2", part 3 of 3:                          0x100
+  .noinit            uninit   0x20000030    0x100  startup.o [1]
+                            - 0x20000130    0x100
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0xc:
+          0x20000024   0xc
+
+Copy (__iar_copy_init3)
+    1 source range, total size 0x24 (102% of destination):
+          0x00012d5c  0x24
+    1 destination range, total size 0x23:
+          0x20000000  0x23
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  ro data  rw data
+    ------            -------  -------  -------
+C:\Program Files\IAR Systems\Embedded Workbench 6.5\arm\examples\TexasInstruments\Stellaris\boards\ek-lm3s1968\audio\ewarm\Obj: [1]
+    audio.o            24 580   48 011        3
+    class-d.o             976       32       32
+    rit128x96x4.o       1 264                12
+    startup.o              10      240      256
+    -------------------------------------------
+    Total:             26 830   48 283      303
+
+command line: [2]
+    -------------------------------------------
+    Total:
+
+dl7M_tln.a: [3]
+    exit.o                  4
+    low_level_init.o        4
+    -------------------------------------------
+    Total:                  8
+
+driverlib-cm3.a: [4]
+    gpio.o                310
+    interrupt.o           224
+    pwm.o                 154
+    ssi.o                 114
+    sysctl.o              992
+    systick.o              40
+    -------------------------------------------
+    Total:              1 834
+
+rt7M_tl.a: [5]
+    cexit.o                10
+    cmain.o                22
+    copy_init3.o           46
+    cstartup_M.o           12
+    data_init.o            40
+    zero_init3.o           34
+    -------------------------------------------
+    Total:                164
+
+shb_l.a: [6]
+    exit.o                 20
+    -------------------------------------------
+    Total:                 20
+
+    Gaps                    6
+    Linker created                  39
+-----------------------------------------------
+    Grand Total:       28 862   48 322      303
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address    Size  Type      Object
+-----                      -------    ----  ----      ------
+?main                   0x00012d05          Code  Gb  cmain.o [5]
+ClassDBusy              0x00012073     0xc  Code  Gb  class-d.o [1]
+ClassDInit              0x00011f69    0x7e  Code  Gb  class-d.o [1]
+ClassDPWMHandler        0x00011de1   0x17a  Code  Gb  class-d.o [1]
+ClassDPlayADPCM         0x00012011    0x1c  Code  Gb  class-d.o [1]
+ClassDPlayPCM           0x00011ff9    0x18  Code  Gb  class-d.o [1]
+ClassDStop              0x0001207f    0x42  Code  Gb  class-d.o [1]
+ClassDVolumeDown        0x000120d5     0xe  Code  Gb  class-d.o [1]
+ClassDVolumeUp          0x000120c1    0x14  Code  Gb  class-d.o [1]
+FaultISR                0x00012d57     0x2  Code  Lc  startup.o [1]
+GPIODirModeSet          0x00011c7d    0x28  Code  Gb  gpio.o [4]
+GPIOPadConfigSet        0x00011ca5    0x98  Code  Gb  gpio.o [4]
+GPIOPinRead             0x00011d3d     0x6  Code  Gb  gpio.o [4]
+GPIOPinTypeGPIOInput    0x00011d4d    0x1a  Code  Gb  gpio.o [4]
+GPIOPinTypeGPIOOutput   0x00011d67     0xa  Code  Gb  gpio.o [4]
+GPIOPinTypePWM          0x00011d83    0x14  Code  Gb  gpio.o [4]
+GPIOPinTypeSSI          0x00011d9f    0x14  Code  Gb  gpio.o [4]
+GPIOPinWrite            0x00011d43     0x6  Code  Gb  gpio.o [4]
+IntDefaultHandler       0x00012d59     0x2  Code  Lc  startup.o [1]
+IntDisable              0x00012bbd    0x58  Code  Gb  interrupt.o [4]
+IntEnable               0x00012b65    0x58  Code  Gb  interrupt.o [4]
+NmiSR                   0x00012d55     0x2  Code  Lc  startup.o [1]
+PWMDeadBandEnable       0x00012b0d     0xa  Code  Gb  pwm.o [4]
+PWMGenConfigure         0x00012aa9    0x2c  Code  Gb  pwm.o [4]
+PWMGenEnable            0x00012ae9     0x6  Code  Gb  pwm.o [4]
+PWMGenIntClear          0x00012b3d     0x6  Code  Gb  pwm.o [4]
+PWMGenIntTrigEnable     0x00012b31     0xc  Code  Gb  pwm.o [4]
+PWMGenPeriodSet         0x00012ad5    0x14  Code  Gb  pwm.o [4]
+PWMOutputState          0x00012b1f    0x12  Code  Gb  pwm.o [4]
+PWMPulseWidthSet        0x00012aef    0x1e  Code  Gb  pwm.o [4]
+RIT128x96x4Clear        0x0001263b    0x38  Code  Gb  rit128x96x4.o [1]
+RIT128x96x4Enable       0x0001272f    0x50  Code  Gb  rit128x96x4.o [1]
+RIT128x96x4Init         0x0001278d    0x6e  Code  Gb  rit128x96x4.o [1]
+RIT128x96x4StringDraw   0x00012673    0xa2  Code  Gb  rit128x96x4.o [1]
+RITWriteCommand         0x00012591    0x50  Code  Lc  rit128x96x4.o [1]
+RITWriteData            0x000125e1    0x50  Code  Lc  rit128x96x4.o [1]
+Region$$Table$$Base     0x00012ce0           --   Gb  - Linker created -
+Region$$Table$$Limit    0x00012d04           --   Gb  - Linker created -
+ResetISR                0x00012d51     0x4  Code  Gb  startup.o [1]
+SSIBusy                 0x00012cad     0xa  Code  Gb  ssi.o [4]
+SSIConfigSetExpClk      0x00012c45    0x46  Code  Gb  ssi.o [4]
+SSIDataPut              0x00012ca3     0xa  Code  Gb  ssi.o [4]
+SSIDisable              0x00012c97     0xc  Code  Gb  ssi.o [4]
+SSIEnable               0x00012c8b     0xc  Code  Gb  ssi.o [4]
+SysCtlClockGet          0x0001231f   0x19a  Code  Gb  sysctl.o [4]
+SysCtlClockSet          0x00012209   0x116  Code  Gb  sysctl.o [4]
+SysCtlDelay             0x00012201     0x8  Code  Gb  sysctl.o [4]
+SysCtlLDOSet            0x000121f9     0x8  Code  Gb  sysctl.o [4]
+SysCtlPWMClockSet       0x000124b9     0xa  Code  Gb  sysctl.o [4]
+SysCtlPeripheralEnable  0x000121b1    0x1c  Code  Gb  sysctl.o [4]
+SysTickEnable           0x00012a81     0xc  Code  Gb  systick.o [4]
+SysTickIntEnable        0x00012a8d     0xc  Code  Gb  systick.o [4]
+SysTickIntHandler       0x0000bc79    0xb0  Code  Gb  audio.o [1]
+SysTickPeriodSet        0x00012a99     0x8  Code  Gb  systick.o [4]
+__cmain                 0x00012d05          Code  Gb  cmain.o [5]
+__exit                  0x00012d31    0x14  Code  Gb  exit.o [6]
+__iar_copy_init3        0x00011db3    0x2e  Code  Gb  copy_init3.o [5]
+__iar_data_init3        0x00012cb9    0x28  Code  Gb  data_init.o [5]
+__iar_program_start     0x00012d45          Code  Gb  cstartup_M.o [5]
+__iar_zero_init3        0x00012b43    0x22  Code  Gb  zero_init3.o [5]
+__low_level_init        0x00012d1b     0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x00000000    0xf0  Data  Gb  startup.o [1]
+_call_main              0x00012d11          Code  Gb  cmain.o [5]
+_exit                   0x00012d25          Code  Gb  cexit.o [5]
+_main                   0x00012d17          Code  Gb  cmain.o [5]
+exit                    0x00012d1f     0x4  Code  Gb  exit.o [3]
+g_lClassDADPCMStepIndex
+                        0x2000001c     0x4  Data  Lc  class-d.o [1]
+g_lClassDVolume         0x20000014     0x4  Data  Lc  class-d.o [1]
+g_pcADPCMIndex          0x000120f4     0x8  Data  Lc  class-d.o [1]
+g_pucADPCMData          0x0000beb8  0x5dc4  Data  Gb  audio.o [1]
+g_pucBuffer             0x20000024     0x8  Data  Lc  rit128x96x4.o [1]
+g_pucClassDBuffer       0x2000000c     0x4  Data  Lc  class-d.o [1]
+g_pucFont               0x00012848   0x1e0  Data  Lc  rit128x96x4.o [1]
+g_pucPCMData            0x000000f0  0xbb88  Data  Gb  audio.o [1]
+g_pucRIT128x96x4HorizontalInc
+                        0x00012844     0x2  Data  Lc  rit128x96x4.o [1]
+g_pucRIT128x96x4Init    0x00012a28    0x50  Data  Lc  rit128x96x4.o [1]
+g_pucRIT128x96x4VerticalInc
+                        0x00012840     0x2  Data  Lc  rit128x96x4.o [1]
+g_pulDisRegs            0x00012c30    0x14  Data  Lc  interrupt.o [4]
+g_pulEnRegs             0x00012c1c    0x14  Data  Lc  interrupt.o [4]
+g_pulRCGCRegs           0x00012518     0xc  Data  Lc  sysctl.o [4]
+g_pulXtals              0x00012524    0x6c  Data  Lc  sysctl.o [4]
+g_pusADPCMStep          0x000120fc    0xb4  Data  Lc  class-d.o [1]
+g_pusClassDSamples      0x20000000     0x4  Data  Lc  class-d.o [1]
+g_ucSwitchClockA        0x20000021     0x1  Data  Lc  audio.o [1]
+g_ucSwitchClockB        0x20000022     0x1  Data  Lc  audio.o [1]
+g_ucSwitches            0x20000020     0x1  Data  Gb  audio.o [1]
+g_ulClassDFlags         0x20000008     0x4  Data  Lc  class-d.o [1]
+g_ulClassDLength        0x20000010     0x4  Data  Lc  class-d.o [1]
+g_ulClassDPeriod        0x20000004     0x4  Data  Lc  class-d.o [1]
+g_ulClassDStep          0x20000018     0x4  Data  Lc  class-d.o [1]
+g_ulSSIFlags            0x2000002c     0x4  Data  Lc  rit128x96x4.o [1]
+main                    0x0000bd29    0xde  Code  Gb  audio.o [1]
+pulStack                0x20000030   0x100  Data  Lc  startup.o [1]
+
+
+[1] = C:\Program Files\IAR Systems\Embedded Workbench 6.5\arm\examples\TexasInstruments\Stellaris\boards\ek-lm3s1968\audio\ewarm\Obj
+[2] = command line
+[3] = dl7M_tln.a
+[4] = driverlib-cm3.a
+[5] = rt7M_tl.a
+[6] = shb_l.a
+
+  28 862 bytes of readonly  code memory
+  48 322 bytes of readonly  data memory
+     303 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
