@@ -6,70 +6,82 @@
   <configuration>
     <name>Debug</name>
     <outputs>
-      <file>$PROJ_DIR$\lab2.c</file>
-      <file>$PROJ_DIR$\startup.c</file>
-      <file>$PROJ_DIR$\..\drivers\rit128x96x4.c</file>
       <file>$TOOLKIT_DIR$\examples\TexasInstruments\Stellaris\driverlib\ewarm-cm3\Exe\driverlib-cm3.a</file>
       <file>$PROJ_DIR$\..\drivers\class-d.c</file>
-      <file>$TOOLKIT_DIR$\examples\TexasInstruments\Stellaris\driverlib\sysctl.h</file>
-      <file>$TOOLKIT_DIR$\examples\TexasInstruments\Stellaris\inc\hw_ints.h</file>
-      <file>$PROJ_DIR$\ewarm\Obj\class-d.pbi</file>
-      <file>$PROJ_DIR$\..\drivers\rit128x96x4.h</file>
-      <file>$PROJ_DIR$\ewarm\Obj\rit128x96x4.pbi</file>
-      <file>$PROJ_DIR$\ewarm\Obj\lab2.o</file>
+      <file>$PROJ_DIR$\ewarm\Obj\class-d.o</file>
+      <file>$PROJ_DIR$\startup.c</file>
       <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+      <file>$PROJ_DIR$\lab2.c</file>
+      <file>$PROJ_DIR$\..\drivers\rit128x96x4.c</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+      <file>$TOOLKIT_DIR$\examples\TexasInstruments\Stellaris\driverlib\gpio.h</file>
+      <file>$PROJ_DIR$\lab2.icf</file>
+      <file>$PROJ_DIR$\ewarm\Obj\class-d.pbi</file>
+      <file>$TOOLKIT_DIR$\lib\m7M_tl.a</file>
+      <file>$PROJ_DIR$\ewarm\Exe\lab2.bin</file>
+      <file>$TOOLKIT_DIR$\examples\TexasInstruments\Stellaris\driverlib\sysctl.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+      <file>$PROJ_DIR$\..\drivers\rit128x96x4.h</file>
+      <file>$PROJ_DIR$\ewarm\List\lab2.map</file>
+      <file>$TOOLKIT_DIR$\examples\TexasInstruments\Stellaris\driverlib\pwm.h</file>
+      <file>$TOOLKIT_DIR$\examples\TexasInstruments\Stellaris\driverlib\ssi.h</file>
+      <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+      <file>$TOOLKIT_DIR$\examples\TexasInstruments\Stellaris\inc\hw_memmap.h</file>
+      <file>$TOOLKIT_DIR$\examples\TexasInstruments\Stellaris\inc\hw_sysctl.h</file>
+      <file>$PROJ_DIR$\ewarm\Obj\lab2.pbi</file>
+      <file>$PROJ_DIR$\..\drivers\class-d.h</file>
+      <file>$PROJ_DIR$\ewarm\Obj\startup.pbi</file>
+      <file>$PROJ_DIR$\ewarm\Obj\lab2.o</file>
+      <file>$PROJ_DIR$\ewarm\Obj\rit128x96x4.pbi</file>
+      <file>$TOOLKIT_DIR$\examples\TexasInstruments\Stellaris\driverlib\debug.h</file>
+      <file>$TOOLKIT_DIR$\examples\TexasInstruments\Stellaris\inc\hw_ssi.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+      <file>$PROJ_DIR$\ewarm\Obj\startup.o</file>
+      <file>$TOOLKIT_DIR$\examples\TexasInstruments\Stellaris\inc\hw_ints.h</file>
+      <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+      <file>$TOOLKIT_DIR$\examples\TexasInstruments\Stellaris\inc\hw_types.h</file>
+      <file>$PROJ_DIR$\ewarm\Exe\lab2.out</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+      <file>$PROJ_DIR$\ewarm\Obj\lab2.pbd</file>
+      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+      <file>$TOOLKIT_DIR$\examples\TexasInstruments\Stellaris\driverlib\interrupt.h</file>
+      <file>$PROJ_DIR$\ewarm\Obj\rit128x96x4.o</file>
+      <file>$TOOLKIT_DIR$\examples\TexasInstruments\Stellaris\driverlib\pin_map.h</file>
       <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
       <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
-      <file>$TOOLKIT_DIR$\examples\TexasInstruments\Stellaris\inc\hw_ssi.h</file>
-      <file>$PROJ_DIR$\..\drivers\class-d.h</file>
-      <file>$PROJ_DIR$\ewarm\Obj\lab2.pbi</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
-      <file>$PROJ_DIR$\ewarm\Obj\class-d.o</file>
-      <file>$PROJ_DIR$\ewarm\Exe\lab2.out</file>
-      <file>$TOOLKIT_DIR$\examples\TexasInstruments\Stellaris\driverlib\pin_map.h</file>
-      <file>$TOOLKIT_DIR$\examples\TexasInstruments\Stellaris\driverlib\systick.h</file>
-      <file>$TOOLKIT_DIR$\examples\TexasInstruments\Stellaris\driverlib\ssi.h</file>
-      <file>$TOOLKIT_DIR$\examples\TexasInstruments\Stellaris\inc\hw_sysctl.h</file>
-      <file>$TOOLKIT_DIR$\examples\TexasInstruments\Stellaris\driverlib\pwm.h</file>
-      <file>$PROJ_DIR$\ewarm\Obj\rit128x96x4.o</file>
-      <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
-      <file>$PROJ_DIR$\ewarm\Obj\lab2.pbd</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
-      <file>$TOOLKIT_DIR$\examples\TexasInstruments\Stellaris\driverlib\gpio.h</file>
-      <file>$PROJ_DIR$\ewarm\Obj\startup.o</file>
-      <file>$TOOLKIT_DIR$\inc\c\string.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
-      <file>$TOOLKIT_DIR$\examples\TexasInstruments\Stellaris\driverlib\debug.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
-      <file>$PROJ_DIR$\ewarm\List\lab2.map</file>
-      <file>$TOOLKIT_DIR$\lib\m7M_tl.a</file>
-      <file>$TOOLKIT_DIR$\examples\TexasInstruments\Stellaris\inc\hw_memmap.h</file>
-      <file>$PROJ_DIR$\ewarm\Exe\lab2.bin</file>
-      <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
-      <file>$TOOLKIT_DIR$\examples\TexasInstruments\Stellaris\inc\hw_types.h</file>
-      <file>$PROJ_DIR$\ewarm\Obj\startup.pbi</file>
-      <file>$PROJ_DIR$\lab2.icf</file>
-      <file>$TOOLKIT_DIR$\examples\TexasInstruments\Stellaris\driverlib\interrupt.h</file>
     </outputs>
     <file>
-      <name>$PROJ_DIR$\lab2.c</name>
+      <name>[ROOT_NODE]</name>
       <outputs>
         <tool>
-          <name>BICOMP</name>
-          <file> 16</file>
+          <name>ILINK</name>
+          <file> 17 37</file>
         </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\drivers\class-d.c</name>
+      <outputs>
         <tool>
           <name>ICCARM</name>
+          <file> 2</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
           <file> 10</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 40 24 43 31 21 5 22 8 33 12 18 37 17 34 30 29 13 36</file>
+          <file> 32 21 36 8 43 41 18 13 24</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 32 21 36 8 43 41 18 13 24</file>
         </tool>
       </inputs>
     </file>
@@ -77,58 +89,58 @@
       <name>$PROJ_DIR$\startup.c</name>
       <outputs>
         <tool>
-          <name>BICOMP</name>
-          <file> 44</file>
+          <name>ICCARM</name>
+          <file> 31</file>
         </tool>
         <tool>
-          <name>ICCARM</name>
-          <file> 32</file>
+          <name>BICOMP</name>
+          <file> 25</file>
         </tool>
       </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\lab2.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 26</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 23</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 21 22 36 8 43 13 30 44 14 7 38 35 40 34 45 15</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 21 22 36 8 43 13 30 44 14 7 38 35 40 34 45 15</file>
+        </tool>
+      </inputs>
     </file>
     <file>
       <name>$PROJ_DIR$\..\drivers\rit128x96x4.c</name>
       <outputs>
         <tool>
-          <name>BICOMP</name>
-          <file> 9</file>
+          <name>ICCARM</name>
+          <file> 42</file>
         </tool>
         <tool>
-          <name>ICCARM</name>
-          <file> 26</file>
+          <name>BICOMP</name>
+          <file> 27</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-          <name>BICOMP</name>
-          <file> 14 40 24 43 35 31 21 23 5 8</file>
-        </tool>
-        <tool>
           <name>ICCARM</name>
-          <file> 14 40 24 43 35 31 21 23 5 8</file>
+          <file> 29 21 22 36 28 8 43 19 13 16</file>
         </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\drivers\class-d.c</name>
-      <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 7</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 19</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 6 40 43 31 21 46 25 5 15</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 6 40 43 31 21 46 25 5 15</file>
+          <file> 29 21 22 36 28 8 43 19 13 16</file>
         </tool>
       </inputs>
     </file>
@@ -137,32 +149,20 @@
       <outputs>
         <tool>
           <name>ILINK</name>
-          <file> 38</file>
+          <file> 17</file>
         </tool>
         <tool>
           <name>OBJCOPY</name>
-          <file> 41</file>
+          <file> 12</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ILINK</name>
-          <file> 45 19 10 26 32 3 11 42 39 27</file>
+          <file> 9 2 26 42 31 0 4 20 11 33</file>
         </tool>
       </inputs>
     </file>
-    <file>
-      <name>[ROOT_NODE]</name>
-      <outputs>
-        <tool>
-          <name>ILINK</name>
-          <file> 38 20</file>
-        </tool>
-      </outputs>
-    </file>
-    <forcedrebuild>
-      <name>[REBUILD_ALL]</name>
-    </forcedrebuild>
   </configuration>
 </project>
 

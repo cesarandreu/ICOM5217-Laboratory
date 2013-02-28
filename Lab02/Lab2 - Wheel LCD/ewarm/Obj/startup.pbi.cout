@@ -1,10 +1,10 @@
-"C:\Program Files\IAR Systems\Embedded Workbench 6.5\arm\examples\TexasInstruments\Stellaris\boards\ek-lm3s1968\Lab2 - Part A\lab2.c"
+"C:\Program Files\IAR Systems\Embedded Workbench 6.5\arm\examples\TexasInstruments\Stellaris\boards\ek-lm3s1968\Lab1 - Scrolling LCD\startup.c"
 -std=c99
 -ferror-limit=100
 -I
-C:\Program Files\IAR Systems\Embedded Workbench 6.5\arm\examples\TexasInstruments\Stellaris\boards\ek-lm3s1968\Lab2 - Part A\..
+C:\Program Files\IAR Systems\Embedded Workbench 6.5\arm\examples\TexasInstruments\Stellaris\boards\ek-lm3s1968\Lab1 - Scrolling LCD\..
 -I
-C:\Program Files\IAR Systems\Embedded Workbench 6.5\arm\examples\TexasInstruments\Stellaris\boards\ek-lm3s1968\Lab2 - Part A\..\..\..
+C:\Program Files\IAR Systems\Embedded Workbench 6.5\arm\examples\TexasInstruments\Stellaris\boards\ek-lm3s1968\Lab1 - Scrolling LCD\..\..\..
 -I
 C:\Program Files\IAR Systems\Embedded Workbench 6.5\arm\inc
 -I
@@ -209,8 +209,8 @@ C:\Program Files\IAR Systems\Embedded Workbench 6.5\arm\examples\TexasInstrument
 -D__HAS_LOCATED_DECLARATION__=1
 -D__HAS_LOCATED_WITH_INIT__=1
 -D__IAR_COMPILERBASE__=593159
--D__DATE__="Feb 27 2013"
--D__TIME__="19:28:03"
+-D__DATE__="Feb 24 2013"
+-D__TIME__="03:27:06"
 -D__STDC__=1
 -D__STDC_VERSION__=199901L
 -D__STDC_HOSTED__=1
