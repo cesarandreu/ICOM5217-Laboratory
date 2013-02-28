@@ -1,0 +1,8 @@
+[DebugChecksum]
+Checksum=1603475103
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
+[Exceptions]
+StopOnUncaught=_ 0
+StopOnThrow=_ 0
