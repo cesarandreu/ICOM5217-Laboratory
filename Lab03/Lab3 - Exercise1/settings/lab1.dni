@@ -1,8 +1,3 @@
-[DebugChecksum]
-Checksum=1437287718
-[Exceptions]
-StopOnUncaught=_ 0
-StopOnThrow=_ 0
 [Stack]
 FillEnabled=0
 OverflowWarningsEnabled=1
@@ -15,10 +10,22 @@ LimitSize=0
 ByteLimit=50
 [LMIFTDIDriver]
 LMI_ResetMode=0x00000000
+[DebugChecksum]
+Checksum=-1014848762
+[Exceptions]
+StopOnUncaught=_ 0
+StopOnThrow=_ 0
 [CallStack]
 ShowArgs=0
 [Disassembly]
 MixedMode=1
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
 [CallStackLog]
 Enabled=0
 [DriverProfiling]
@@ -27,13 +34,6 @@ Mode=0
 Graph=0
 Symbiont=0
 Exclusions=
-[Log file]
-LoggingEnabled=_ 0
-LogFile=_ ""
-Category=_ 0
-[TermIOLog]
-LoggingEnabled=_ 0
-LogFile=_ ""
 [Disassemble mode]
 mode=0
 [Breakpoints]

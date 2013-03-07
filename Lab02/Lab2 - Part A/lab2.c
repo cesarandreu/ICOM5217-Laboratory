@@ -1,4 +1,13 @@
 
+/*
+* This is Part A of Lab 02
+* Here we have two buttons and an LCD connected to the MCU
+* When you start up the board, it initializes the display and displays a zero.
+* When you press the up button it increments the number shown.
+* When you press the down button it decrements the number shown. 
+* If you go below 0 or above 1, since it is the ASCII value, it will begin showing other characters.
+*/
+
 #include "inc/hw_memmap.h"
 #include "inc/hw_sysctl.h"
 #include "inc/hw_types.h"
@@ -10,7 +19,6 @@
   //Count. Starts at 48 which is 0 in ASCII.
   int count = 48;
   int currentCount = 48;
-
 
 
 //*****************************************************************************
@@ -28,7 +36,7 @@ __error__(char *pcFilename, unsigned long ulLine)
 //Function that gets called if anything is received in Port G. 
 void intPortG(){
   
-  //Clears the interrupt.
+  //Clears the interrupt for Pin 1 and Pin 2 in Port G.
   GPIOPinIntClear(GPIO_PORTG_BASE, 0x06);
 
   //If Pin 2 has a 1, it increments the count.
@@ -42,7 +50,7 @@ void intPortG(){
   }
 }
 
-//Toggles the Enable. (Pin 2)
+//Toggles the Enable for when dealing with the LCD. (Pin 2)
 void toggleEnable(){
 
   GPIOPinWrite(GPIO_PORTD_BASE, GPIO_PIN_2, 0x04);
@@ -52,7 +60,8 @@ void toggleEnable(){
   SysCtlDelay(50000);
 }
 
-//Moves to the top line when it's true, bottom line when it's false. 
+//Sets the cursor on the LCD.
+//Moves to the top line when it's true, bottom line when it's false.
 void moveLine(_Bool top){
   
   //If it's true you go to the top line.
@@ -87,7 +96,6 @@ void printCharLCD(char myChar){
 }
 
 
-
 int main(void){
     //
     // If running on Rev A2 silicon, turn the LDO voltage up to 2.75V.  This is
@@ -111,10 +119,8 @@ int main(void){
     GPIOPinTypeGPIOOutput(GPIO_PORTD_BASE, 0x05);
     GPIOPinTypeGPIOOutput(GPIO_PORTA_BASE, 0xFF);
     
-
     //Sets Port G as input.
     GPIOPinTypeGPIOInput(GPIO_PORTG_BASE, 0x06);
-    
 
     //Sets all in Port D and Port A as zero.
     GPIOPinWrite(GPIO_PORTA_BASE, 0xFF, 0x00);
@@ -143,26 +149,25 @@ int main(void){
     printCharLCD((char)(count));
     
     
-     /*==========
-    *Interrupt configuration
-    */
-    
-    //Sets Port G as interrupt
+    //**********************    
+    //Interrupt configuration
+    //**********************    
+    //Enables interrupts in Pin 1 and Pin 2 on Port G
     GPIOPinIntEnable(GPIO_PORTG_BASE, (GPIO_PIN_2 | GPIO_PIN_1));
     
-    //Gets Port G's interrupt function
+    //Sets Port G's interrupt function
     GPIOPortIntRegister(GPIO_PORTG_BASE, intPortG);
     
-    //Sets Interrupt as Rising Edge
+    //Sets Interrupt as Rising Edge for Pin 1 and Pin 2 on Port G
     GPIOIntTypeSet(GPIO_PORTG_BASE, (GPIO_PIN_2 | GPIO_PIN_1), GPIO_RISING_EDGE);
-    
-    /*===========
-    *Interrupt configuration end
-    */
-    
+    //**********************
+    //Interrupt configuration end
+    //**********************
+
     // Loop forever.
     while(1)
     {
+      //If the currentCount is not equal to the count on the LCD, it updates the character
       if(currentCount != count){
         moveLine(true);
         printCharLCD((char)(count));

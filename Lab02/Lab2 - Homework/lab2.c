@@ -13,6 +13,8 @@
 When you spin it clockwise, the list goes up. (Bottom -> Up)
 When you spin it counter-clockwise, the list goes down. (Up -> Down)
 
+In the Power Supply, the 25V source has 3.3V, the 6V source has 4.5V.
+
 */
 
     //Array of strings.
@@ -42,6 +44,7 @@ signed long currentPosition = 0;
 unsigned int oldPos = 0;
 unsigned int newPos = 0;
 
+//Identifies what position we have moved to
 unsigned int identifier = 0;
 
 //This variable represents direction.
