@@ -1,0 +1,255 @@
+###############################################################################
+#                                                                             #
+# IAR ELF Linker V6.50.2.4510/W32 for ARM               07/Mar/2013  04:55:33 #
+# Copyright 2007-2012 IAR Systems AB.                                         #
+#                                                                             #
+#    Output file  =  C:\Program Files\IAR Systems\Embedded Workbench          #
+#                    6.5\arm\examples\TexasInstruments\Stellaris\boards\ek-lm #
+#                    3s1968\Lab3 - Homework\ewarm\Exe\lab3.out                #
+#    Map file     =  C:\Program Files\IAR Systems\Embedded Workbench          #
+#                    6.5\arm\examples\TexasInstruments\Stellaris\boards\ek-lm #
+#                    3s1968\Lab3 - Homework\ewarm\List\lab3.map               #
+#    Command line =  "C:\Program Files\IAR Systems\Embedded Workbench         #
+#                    6.5\arm\examples\TexasInstruments\Stellaris\boards\ek-lm #
+#                    3s1968\Lab3 - Homework\ewarm\Obj\lab3.o" "C:\Program     #
+#                    Files\IAR Systems\Embedded Workbench                     #
+#                    6.5\arm\examples\TexasInstruments\Stellaris\boards\ek-lm #
+#                    3s1968\Lab3 - Homework\ewarm\Obj\startup.o" "C:\Program  #
+#                    Files\IAR Systems\Embedded Workbench                     #
+#                    6.5\arm\examples\TexasInstruments\Stellaris\driverlib\ew #
+#                    arm-cm3\Exe\driverlib-cm3.a" --redirect                  #
+#                    _Printf=_PrintfTiny --redirect _Scanf=_ScanfSmall -o     #
+#                    "C:\Program Files\IAR Systems\Embedded Workbench         #
+#                    6.5\arm\examples\TexasInstruments\Stellaris\boards\ek-lm #
+#                    3s1968\Lab3 - Homework\ewarm\Exe\lab3.out" --map         #
+#                    "C:\Program Files\IAR Systems\Embedded Workbench         #
+#                    6.5\arm\examples\TexasInstruments\Stellaris\boards\ek-lm #
+#                    3s1968\Lab3 - Homework\ewarm\List\lab3.map" --config     #
+#                    "C:\Program Files\IAR Systems\Embedded Workbench         #
+#                    6.5\arm\examples\TexasInstruments\Stellaris\boards\ek-lm #
+#                    3s1968\Lab3 - Homework\lab3.icf" --semihosting --entry   #
+#                    __iar_program_start --vfe                                #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A1":  place at start of [0x00000000-0x0003ffff] { ro section .intvec };
+"P1":  place in [from 0x00000000 to 0x0003ffff] { ro };
+"A2":  place at start of [0x20000000-0x2000ffff] { section VTABLE };
+"P2":  place in [from 0x20000000 to 0x2000ffff] { rw, block HEAP };
+
+  Section          Kind        Address   Size  Object
+  -------          ----        -------   ----  ------
+"A1":                                    0xf0
+  .intvec          const    0x00000000   0xf0  startup.o [1]
+                          - 0x000000f0   0xf0
+
+"P1":                                   0xbb4
+  .text            ro code  0x000000f0  0x308  lab3.o [1]
+  .text            ro code  0x000003f8  0x110  timer.o [4]
+  .text            ro code  0x00000508  0x2cc  gpio.o [4]
+  .text            ro code  0x000007d4  0x1a0  sysctl.o [4]
+  .text            ro code  0x00000974   0x36  strlen.o [5]
+  .text            ro code  0x000009aa   0x22  zero_init3.o [5]
+  .text            ro code  0x000009cc   0x34  sprintf.o [3]
+  .text            ro code  0x00000a00   0xa4  interrupt.o [4]
+  .text            ro code  0x00000aa4  0x15e  xprintftiny.o [3]
+  .text            ro code  0x00000c02    0xa  xsprout.o [3]
+  .text            ro code  0x00000c0c   0x28  data_init.o [5]
+  .iar.init_table  const    0x00000c34   0x18  - Linker created -
+  .text            ro code  0x00000c4c   0x16  cmain.o [5]
+  .text            ro code  0x00000c62    0x4  low_level_init.o [3]
+  .text            ro code  0x00000c66    0x4  exit.o [3]
+  .text            ro code  0x00000c6c    0xa  cexit.o [5]
+  .text            ro code  0x00000c78   0x14  exit.o [6]
+  .text            ro code  0x00000c8c    0xc  cstartup_M.o [5]
+  .text            ro code  0x00000c98    0xa  startup.o [1]
+  .rodata          const    0x00000ca2    0x0  zero_init3.o [5]
+                          - 0x00000ca2  0xbb2
+
+"A2":                                   0x26c
+  VTABLE           zero     0x20000000  0x26c  interrupt.o [4]
+                          - 0x2000026c  0x26c
+
+"P2", part 1 of 2:                       0x40
+  .bss             zero     0x2000026c   0x40  lab3.o [1]
+                          - 0x200002ac   0x40
+
+"P2", part 2 of 2:                      0x100
+  .noinit          uninit   0x200002ac  0x100  startup.o [1]
+                          - 0x200003ac  0x100
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Zero (__iar_zero_init3)
+    2 destination ranges, total size 0x2ac:
+          0x20000000  0x26c
+          0x2000026c   0x40
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  ro data  rw data
+    ------            -------  -------  -------
+C:\Program Files\IAR Systems\Embedded Workbench 6.5\arm\examples\TexasInstruments\Stellaris\boards\ek-lm3s1968\Lab3 - Homework\ewarm\Obj: [1]
+    lab3.o                776                64
+    startup.o              10      240      256
+    -------------------------------------------
+    Total:                786      240      320
+
+command line: [2]
+    -------------------------------------------
+    Total:
+
+dl7M_tln.a: [3]
+    exit.o                  4
+    low_level_init.o        4
+    sprintf.o              52
+    xprintftiny.o         350
+    xsprout.o              10
+    -------------------------------------------
+    Total:                420
+
+driverlib-cm3.a: [4]
+    gpio.o                716
+    interrupt.o           164               620
+    sysctl.o              416
+    timer.o               272
+    -------------------------------------------
+    Total:              1 568               620
+
+rt7M_tl.a: [5]
+    cexit.o                10
+    cmain.o                22
+    cstartup_M.o           12
+    data_init.o            40
+    strlen.o               54
+    zero_init3.o           34
+    -------------------------------------------
+    Total:                172
+
+shb_l.a: [6]
+    exit.o                 20
+    -------------------------------------------
+    Total:                 20
+
+    Gaps                    4
+    Linker created                  24
+-----------------------------------------------
+    Grand Total:        2 970      264      940
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address   Size  Type      Object
+-----                      -------   ----  ----      ------
+?main                   0x00000c4d         Code  Gb  cmain.o [5]
+FaultISR                0x00000c9f    0x2  Code  Lc  startup.o [1]
+GPIODirModeSet          0x0000060b   0x28  Code  Gb  gpio.o [4]
+GPIOGetIntNumber        0x00000509  0x102  Code  Lc  gpio.o [4]
+GPIOIntTypeSet          0x00000633   0x38  Code  Gb  gpio.o [4]
+GPIOPadConfigSet        0x0000066b   0x98  Code  Gb  gpio.o [4]
+GPIOPinIntClear         0x00000709    0x6  Code  Gb  gpio.o [4]
+GPIOPinIntEnable        0x00000703    0x6  Code  Gb  gpio.o [4]
+GPIOPinRead             0x00000729    0x6  Code  Gb  gpio.o [4]
+GPIOPinTypeGPIOInput    0x00000739   0x1a  Code  Gb  gpio.o [4]
+GPIOPinTypeGPIOOutput   0x00000753    0xa  Code  Gb  gpio.o [4]
+GPIOPinWrite            0x0000072f    0x6  Code  Gb  gpio.o [4]
+GPIOPortIntRegister     0x0000070f   0x1a  Code  Gb  gpio.o [4]
+IntDefaultHandler       0x00000ca1    0x2  Code  Lc  startup.o [1]
+IntEnable               0x00000a27   0x58  Code  Gb  interrupt.o [4]
+IntRegister             0x00000a01   0x26  Code  Gb  interrupt.o [4]
+NmiSR                   0x00000c9d    0x2  Code  Lc  startup.o [1]
+RPM                     0x20000288    0x4  Data  Gb  lab3.o [1]
+Region$$Table$$Base     0x00000c34          --   Gb  - Linker created -
+Region$$Table$$Limit    0x00000c4c          --   Gb  - Linker created -
+ResetISR                0x00000c99    0x4  Code  Gb  startup.o [1]
+SysCtlClockSet          0x0000082d  0x116  Code  Gb  sysctl.o [4]
+SysCtlDelay             0x00000825    0x8  Code  Gb  sysctl.o [4]
+SysCtlLDOSet            0x0000081d    0x8  Code  Gb  sysctl.o [4]
+SysCtlPeripheralEnable  0x000007d5   0x1c  Code  Gb  sysctl.o [4]
+TimerConfigure          0x00000427   0x26  Code  Gb  timer.o [4]
+TimerEnable             0x0000041b    0xc  Code  Gb  timer.o [4]
+TimerIntClear           0x000004a5    0x4  Code  Gb  timer.o [4]
+TimerIntEnable          0x0000049b    0x4  Code  Gb  timer.o [4]
+TimerIntNumberGet       0x000003f9   0x22  Code  Lc  timer.o [4]
+TimerIntRegister        0x00000461   0x3a  Code  Gb  timer.o [4]
+TimerLoadSet            0x00000451   0x10  Code  Gb  timer.o [4]
+_PrintfTiny             0x00000abd  0x142  Code  Gb  xprintftiny.o [3]
+_SProut                 0x00000c03    0xa  Code  Gb  xsprout.o [3]
+__cmain                 0x00000c4d         Code  Gb  cmain.o [5]
+__exit                  0x00000c79   0x14  Code  Gb  exit.o [6]
+__iar_data_init3        0x00000c0d   0x28  Code  Gb  data_init.o [5]
+__iar_program_start     0x00000c8d         Code  Gb  cstartup_M.o [5]
+__iar_zero_init3        0x000009ab   0x22  Code  Gb  zero_init3.o [5]
+__low_level_init        0x00000c63    0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x00000000   0xf0  Data  Gb  startup.o [1]
+_call_main              0x00000c59         Code  Gb  cmain.o [5]
+_exit                   0x00000c6d         Code  Gb  cexit.o [5]
+_main                   0x00000c5f         Code  Gb  cmain.o [5]
+calculateRPM            0x00000109   0x2a  Code  Gb  lab3.o [1]
+currentTime             0x20000280    0x4  Data  Gb  lab3.o [1]
+direction               0x20000298    0x4  Data  Gb  lab3.o [1]
+exit                    0x00000c67    0x4  Code  Gb  exit.o [3]
+externalCounter         0x20000284    0x4  Data  Gb  lab3.o [1]
+g_pfnRAMVectors         0x20000000  0x26c  Data  Lc  interrupt.o [4]
+g_ppulTimerIntMap       0x000004a8   0x60  Data  Lc  timer.o [4]
+g_pulEnRegs             0x00000a90   0x14  Data  Lc  interrupt.o [4]
+g_pulRCGCRegs           0x00000968    0xc  Data  Lc  sysctl.o [4]
+identifier              0x20000294    0x4  Data  Gb  lab3.o [1]
+intPortB                0x00000147   0x6c  Code  Gb  lab3.o [1]
+intTimerA               0x00000133   0x14  Code  Gb  lab3.o [1]
+main                    0x00000259  0x118  Code  Gb  lab3.o [1]
+moveLine                0x000001db   0x2c  Code  Gb  lab3.o [1]
+newPos                  0x20000290    0x4  Data  Gb  lab3.o [1]
+oldPos                  0x2000028c    0x4  Data  Gb  lab3.o [1]
+out                     0x00000aa5   0x18  Code  Lc  xprintftiny.o [3]
+printStringLCD          0x00000211   0x3c  Code  Gb  lab3.o [1]
+pulStack                0x200002ac  0x100  Data  Lc  startup.o [1]
+rollTimers              0x000000f1   0x18  Code  Gb  lab3.o [1]
+sprintf                 0x000009cd   0x34  Code  Gb  sprintf.o [3]
+string                  0x2000029c   0x10  Data  Gb  lab3.o [1]
+strlen                  0x00000975         Code  Gb  strlen.o [5]
+time1                   0x2000027c    0x4  Data  Gb  lab3.o [1]
+time2                   0x20000278    0x4  Data  Gb  lab3.o [1]
+time3                   0x20000274    0x4  Data  Gb  lab3.o [1]
+time4                   0x20000270    0x4  Data  Gb  lab3.o [1]
+time5                   0x2000026c    0x4  Data  Gb  lab3.o [1]
+toggleEnable            0x000001b3   0x28  Code  Gb  lab3.o [1]
+
+
+[1] = C:\Program Files\IAR Systems\Embedded Workbench 6.5\arm\examples\TexasInstruments\Stellaris\boards\ek-lm3s1968\Lab3 - Homework\ewarm\Obj
+[2] = command line
+[3] = dl7M_tln.a
+[4] = driverlib-cm3.a
+[5] = rt7M_tl.a
+[6] = shb_l.a
+
+  2 970 bytes of readonly  code memory
+    264 bytes of readonly  data memory
+    940 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
