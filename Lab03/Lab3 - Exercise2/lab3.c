@@ -1,4 +1,3 @@
-
 #include "inc/hw_ints.h"
 #include "inc/hw_memmap.h"
 #include "inc/hw_sysctl.h"
@@ -140,23 +139,28 @@ void intPortG(){
   //If both up and down buttons are pressed
   if(GPIOPinRead(GPIO_PORTG_BASE, (GPIO_PIN_1|GPIO_PIN_2)) == 0x06){
     
+    // Checks to make sure the user still has tries left.
     if(triesLeft > 1){
+      //Reduces the user's tries and informes them of how many they have left.
         triesLeft--;
         printTriesLeft();
         SysCtlDelay(1330000);
         
+        //Checks the user's number to determines if its larger and informes them.
         if(playerValue > randomNumber){
           moveLine(true);
           sprintf(string, "%d is too big    ", playerValue);
           printStringLCD(string);
           
         } else if(playerValue < randomNumber){
+          //Checks the user's number to determines if its smaller and informes them.
           moveLine(true);
           sprintf(string, "%d is too small  ", playerValue);
           printStringLCD(string);
           
           
         } else if(playerValue == randomNumber){
+          //Checks the user's number to determines if its the same and informes them of their victory.
           moveLine(true);
           sprintf(string, "%d is correct!   ", playerValue);
           printStringLCD(string);
@@ -165,13 +169,14 @@ void intPortG(){
           win=1;
         }
         
+        //If the player hasn't won, resets the screen to continue the game.
         if(win==0){
           SysCtlDelay(8000000);
           redrawScreen();
         }
         
     } else if(triesLeft == 1){
-      
+      //If the user is down to their last try and their guess wasn't correct, informes them they lost.
         if(playerValue > randomNumber){
           moveLine(true);
           sprintf(string, "%d is too big    ", playerValue);
@@ -191,6 +196,7 @@ void intPortG(){
           lose=1;
           
         } else if(playerValue == randomNumber){
+          //If they guessed correctly, Tells them they won!
           moveLine(true);
           sprintf(string, "%d is correct!     ", playerValue);
           printStringLCD(string);
@@ -203,7 +209,7 @@ void intPortG(){
     
     //Waits 3 seconds.
     SysCtlDelay(8000000);
-    
+    //Resets the game when informed of a win or lose.
     if((win==1) || (lose==1)){
       win=0;
       lose=0;
@@ -215,7 +221,7 @@ void intPortG(){
     
   }  
   
-  //If only the up button is pressed
+  //If only the up button is pressed, increases the user's number by 1.
   if(GPIOPinRead(GPIO_PORTG_BASE, (GPIO_PIN_2|GPIO_PIN_1)) == 0x04){
     if(playerValue<9){
       playerValue++;
@@ -224,7 +230,7 @@ void intPortG(){
     
   }
   
-  //If only the down button is pressed
+  //If only the down button is pressed, decreases the user's by 1.
   if(GPIOPinRead(GPIO_PORTG_BASE, (GPIO_PIN_1|GPIO_PIN_2)) == 0x02){
     if(playerValue>0){
       playerValue--;
@@ -299,6 +305,7 @@ int main(void){
     GPIOPortIntRegister(GPIO_PORTG_BASE, intPortG);
     GPIOPinIntEnable(GPIO_PORTG_BASE, (GPIO_PIN_1 | GPIO_PIN_2));
     
+    //Generates the random number.
     randomNum();
      
     moveLine(true);
