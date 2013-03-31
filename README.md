@@ -32,9 +32,15 @@ Video: <http://www.youtube.com/watch?v=dlT4J7IxGwY>
 
 
 ####Lab 03 Homework
-Lab 03's Homework consisted in taking the previously built encoder wheel and calculating its RPM and spinning direction. 
+Lab 03's Homework consisted in taking the previously built encoder wheel and calculating its RPM and spinning direction. The RPM is calculated by using the time that has passed during the last six detected movements. Depending on the value picked up by the sensor and the previous value, the direction of the wheel is calculated. 
 
 Video: <http://www.youtube.com/watch?v=PkS0cY9fZZM>
+
+
+####Lab 04 Homework
+Lab 04's Homework consisted in taking an LCD, a keypad, two push-buttons, and two seven-segment displays and creating a addition/subtraction calculator. The first number entered on the keypad is the left number on the 7SD, the second number is the right number on the 7SD. Pressing '*' sets the operation as addition, pressing '#' sets the operation as subtraction. One-push button is Enter, which evaluates the expression if there are two operands and an operator. The other push-button is Clear, which clears the two numbers and the operator or the result from the 7SD. 
+
+Video: <http://www.youtube.com/watch?v=W5k6X9JIqtA>
 
 
 ***
@@ -47,4 +53,12 @@ Copy whichever example you wish to compile from its respective Lab folder into t
 
 	C:\Program Files\IAR Systems\Embedded Workbench 6.5\arm\examples\TexasInstruments\Stellaris\boards\ek-lm3s1968\
 
-Open the *.eww project file inside the folder with IAR and right click on driverlib-cm3 and select Make. Then open the program's source code inside IAR and select Download and Debug. Finally, select run.
+Open the **\*.eww** project file inside the folder with IAR. Right click on driverlib-cm3 and select *Make*. Then open the program's source code by double-clicking it and select *Download and Debug*. Finally, select *Run*.
+
+
+***
+
+
+##Laboratory Experiment's PDFs
+Inside the *PDFs* folder you can find the course's laboratory experiment's PDFs as well as a supplementary PDF for dealing with rotary encoders. These PDFs contain some errors and the parts used may not precisely match the parts specified by the instructions.
+
