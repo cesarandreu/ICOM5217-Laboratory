@@ -18,3 +18,6 @@
 
 Libraries/
 Debug/
+driverlib/
+ewarm/
+
