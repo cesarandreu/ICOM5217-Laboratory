@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<infocenter_data version="1.0">
-  <iar_name>Audio Playback</iar_name>                                   <!--App-->
-  <iar_description>This example application plays audio via the Class-D amplifier and speaker</iar_description>                     <!--App short description-->
-  <iar_curdir>$CUR_DIR$</iar_curdir>
-</infocenter_data>
